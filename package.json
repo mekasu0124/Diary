@@ -4,7 +4,10 @@
   "description": "a light-weight diary application that uses a ReactJS + Electron front-end with a FastAPI backend for local storage and data manipulation.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run dev:server\" \"npm run client\" ",
+    "dev:server": "cd server && python main.py",
+    "client": "cd client && npm run electron:serve"
   },
   "repository": {
     "type": "git",
