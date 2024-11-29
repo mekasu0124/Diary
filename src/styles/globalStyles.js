@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     --bg2: #651142;
     --hvr: #D1258A;
     --bdr: #a95486;
-    --shadow: #A95486;
+    --shadow: black;
     --fg: #CB87AF;
     --txtFont: "Rancho";
   }
