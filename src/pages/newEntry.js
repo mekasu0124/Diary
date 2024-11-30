@@ -25,33 +25,27 @@ export default function NewEntry() {
       <FormContainer>
         <FormEntryContainer>
           <FormRow>
-            <FormLabel htmlForm=""></FormLabel>
+            <FormLabel htmlForm="date"></FormLabel>
 
-            <FormInput type="" id="" name="" />
+            <FormInput type="date" id="date" name="date" />
           </FormRow>
 
           <FormRow>
-            <FormLabel htmlForm=""></FormLabel>
+            <FormLabel htmlForm="time"></FormLabel>
 
-            <FormInput type="" id="" name="" />
+            <FormInput type="time" id="time" name="time" />
           </FormRow>
 
           <FormRow>
-            <FormLabel htmlForm=""></FormLabel>
+            <FormLabel htmlForm="title"></FormLabel>
 
-            <FormInput type="" id="" name="" />
+            <FormInput type="text" id="title" name="title" />
           </FormRow>
 
           <FormRow>
-            <FormLabel htmlForm=""></FormLabel>
+            <FormLabel htmlForm="entry"></FormLabel>
 
-            <FormInput type="" id="" name="" />
-          </FormRow>
-
-          <FormRow>
-            <FormLabel htmlForm=""></FormLabel>
-
-            <FormTextArea type="" id="" name=""></FormTextArea>
+            <FormTextArea id="entry" name="entry"></FormTextArea>
           </FormRow>
         </FormEntryContainer>
 
