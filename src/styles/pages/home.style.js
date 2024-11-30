@@ -125,7 +125,7 @@ export const NewEntryButton = styled(Link)`
   color: var(--fg);
   text-shadow: 2px 2px var(--shadow);
   width: 300px;
-  height: 60px;
+  padding: 10px;
   border: 2px solid var(--bdr);
   border-radius: 20px;
   background-color: var(--bg2);
