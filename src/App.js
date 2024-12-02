@@ -6,8 +6,6 @@ import Home from './pages/home';
 import SignUp from './pages/auth/signup';
 import Login from './pages/auth/login';
 
-import NewEntry from './pages/newEntry';
-
 
 export default function App() {
   return (
@@ -19,8 +17,6 @@ export default function App() {
           <Route path="signup" element={<SignUp />} />
           <Route path="login" element={<Login />} />
         </Route>
-
-        <Route path="/new-entry" element={<NewEntry />} />
       </Routes>
     </div>
   );
