@@ -3,10 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import api from '../../hooks/api';
 
-import SignUpLeftTop from '../../components/signup/signUpLeftTop';
-import SignUpRightTop from '../../components/signup/signUpRightTop';
-import SignUpLeftBottom from '../../components/signup/signUpLeftBottom';
-import SignUpRightBottom from '../../components/signup/signUpRightBottom';
+import SignUpLeftTop from '../../components/home/auth/signUpLeftTop';
+import SignUpRightTop from '../../components/home/auth/signUpRightTop';
+import SignUpLeftBottom from '../../components/home/auth/signUpLeftBottom';
+import SignUpRightBottom from '../../components/home/auth/signUpRightBottom';
 
 
 export default function SignUp() {
