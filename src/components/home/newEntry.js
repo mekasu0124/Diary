@@ -1,31 +1,37 @@
+import TitleBar from "../header/titleBar";
+
+import CustomLabel from '../general/label';
+import CustomInput from "../general/input";
 
 
 export default function NewEntry() {
   return (
-    <div className="flex flex-col items-center justify-start w-full min-h-screen">
-      <div className="flex justify-center items-center flex-col flex-shrink-0 w-[50%] h-[50px] border-2 border-bdr rounded-lg shadow-shadow shadow-lg m-t-5">
-        <h1 className="font-rancho font-bold italic text-2xl text-fg tracking-widest">
-          Let&#39;s Create A New Entry...
-        </h1>
-      </div>
+    <div className="flex flex-col items-center justify-start w-[45%] ml-2 mr-2 p-2 h-[700px] border-2 border-bdr rounded-xl shadow-shadow shadow-lg">
+      <TitleBar
+        props={{
+          title: 'Create A New Entry',
+          subTitle: 'All Entries Are Required',
+        }} />
 
-      <form className="">
-        <div className="">
-          <div className="">
-            <label
-              htmlForm="date"
-              className="font-rancho italic text-xl text-fg textShadow tracking-widest">
+      <form className="flex flex-col items-center justify-start w-full flex-1 mt-2">
+        <div className="flex flex-col items-center justify-start w-full flex-1">
+          <div className="flex flex-row items-center justify-center w-[90%] mt-1 mb-1">
+            <CustomLabel 
+              props={{ 
+                htmlFor: "date", 
+                text: "Today's Date"
+              }} />
 
-              </label>
-
-            <input
-              type="date"
-              id="date"
-              name="date"
-              className="font-rancho italic text-xl text-fg tracking-widest outline-none hover:outline-none hover:bg-hvr hover:text-black focus:outline-none" />
+            <CustomInput
+              props={{
+                type: 'date',
+                id: 'date',
+                name: 'date',
+                disabled: true,
+              }} />
           </div>
 
-          <div className="">
+          <div className="flex flex-row items-center justify-center w-[90%] mt-1 mb-1">
             <label
               htmlForm="time"
               className="font-rancho italic text-xl text-fg textShadow tracking-widest">
@@ -39,7 +45,7 @@ export default function NewEntry() {
               className="font-rancho italic text-xl text-fg tracking-widest outline-none hover:outline-none hover:bg-hvr hover:text-black focus:outline-none" />
           </div>
 
-          <div className="">
+          <div className="flex flex-row items-center justify-center w-[90%] mt-1 mb-1">
             <label
               htmlForm="title"
               className="font-rancho italic text-xl text-fg textShadow tracking-widest">
@@ -53,7 +59,7 @@ export default function NewEntry() {
               className="font-rancho italic text-xl text-center text-fg tracking-widest outline-none hover:outline-none hover:bg-hvr hover:text-black focus:outline-none" />
           </div>
 
-          <div className="">
+          <div className="flex flex-row items-center justify-center w-[90%] mt-1 mb-1">
             <label
               htmlForm="entry"
               className="font-rancho italic text-xl text-fg textShadow tracking-widest">
