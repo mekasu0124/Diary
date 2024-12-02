@@ -3,10 +3,13 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import api from '../../hooks/api';
 
-import SignUpLeftTop from '../../components/home/auth/signUpLeftTop';
-import SignUpRightTop from '../../components/home/auth/signUpRightTop';
-import SignUpLeftBottom from '../../components/home/auth/signUpLeftBottom';
-import SignUpRightBottom from '../../components/home/auth/signUpRightBottom';
+import SignUpLeftTop from '../../components/panel/auth/signUpLeftTop';
+import SignUpRightTop from '../../components/panel/auth/signUpRightTop';
+import SignUpLeftBottom from '../../components/panel/auth/signUpLeftBottom';
+import SignUpRightBottom from '../../components/panel/auth/signUpRightBottom';
+import TitleBar from '../../components/individual/titleBar';
+import CustomLink from '../../components/individual/link';
+import CustomButton from '../../components/individual/button';
 
 
 export default function SignUp() {
@@ -97,11 +100,7 @@ export default function SignUp() {
 
   return (
     <div className="flex flex-col items-center justify-start w-full min-h-screen">
-      <div className="flex flex-col items-center justify-center w-full flex-shrink-0 p-2">
-        <h3 className="font-rancho font-bold italic text-fg text-2xl text-center w-full tracking-widest">
-          Let's Get You Started With A New Account!
-        </h3>
-      </div>
+      <TitleBar props={{ title: "Let's Get You Started With A New Account!" }} />
 
       <form onSubmit={handleSubmit} className="flex flex-col items-center justify-start w-full flex-1">
         <div className="flex flex-row items-center justify-center w-full flex-1">
@@ -167,17 +166,9 @@ export default function SignUp() {
 
         {/* button area */}
         <div className="flex flex-row items-center justify-evenly w-full flex-shrink-0">
-          <Link to="/" className="font-rancho italic text-2xl text-fg text-center tracking-widest border-2 border-bdr rounded-full w-[300px] p-2 mb-5 mt-5 hover:bg-bdr hover:text-black hover:underline hover:transition-transform duration-300 hover:scale-105">
-            Cancel
-          </Link>
-
-          <Link to="/auth/login" className="font-rancho italic text-2xl text-fg text-center tracking-widest border-2 border-bdr rounded-full w-[300px] p-2 mb-5 mt-5 hover:bg-bdr hover:text-black hover:underline hover:transition-transform duration-300 hover:scale-105">
-            Login
-          </Link>
-          
-          <button type="submit" className="font-rancho italic text-2xl text-fg text-center tracking-widest border-2 border-bdr rounded-full w-[300px] p-2 mb-5 mt-5 hover:bg-bdr hover:text-black hover:underline hover:transition-transform duration-300 hover:scale-105">
-            Create Account
-          </button>
+          <CustomLink props={{ link: "/", text: 'Cancel' }} />
+          <CustomLink props={{ link: '/auth/login', text: 'Login' }} />
+          <CustomButton props={{ type: 'submit', text: 'Create Account' }} />
         </div>
       </form>
     </div>
