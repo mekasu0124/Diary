@@ -1,56 +1,74 @@
-import {
-  NewEntryContainer,
-  TitleContainer,
-  FormContainer,
-  FormEntryContainer,
-  FormButtonContainer,
-  FormRow,
-  Title,
-  FormLabel,
-  FormInput,
-  FormTextArea,
-  FormButton
-} from '../styles/pages/newEntry.style';
 
 
 export default function NewEntry() {
   return (
-    <NewEntryContainer>
-      <TitleContainer>
-        <Title>
+    <div className="flex flex-col items-center justify-start w-full min-h-screen">
+      <div className="flex justify-center items-center flex-col flex-shrink-0 w-[50%] h-[50px] border-2 border-bdr rounded-lg shadow-shadow shadow-lg m-t-5">
+        <h1 className="font-rancho font-bold italic text-2xl text-fg tracking-widest">
           Let&#39;s Create A New Entry...
-        </Title>
-      </TitleContainer>
+        </h1>
+      </div>
 
-      <FormContainer>
-        <FormEntryContainer>
-          <FormRow>
-            <FormLabel htmlForm="date"></FormLabel>
+      <form className="">
+        <div className="">
+          <div className="">
+            <label
+              htmlForm="date"
+              className="font-rancho italic text-xl text-fg textShadow tracking-widest">
 
-            <FormInput type="date" id="date" name="date" />
-          </FormRow>
+              </label>
 
-          <FormRow>
-            <FormLabel htmlForm="time"></FormLabel>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              className="font-rancho italic text-xl text-fg tracking-widest outline-none hover:outline-none hover:bg-hvr hover:text-black focus:outline-none" />
+          </div>
 
-            <FormInput type="time" id="time" name="time" />
-          </FormRow>
+          <div className="">
+            <label
+              htmlForm="time"
+              className="font-rancho italic text-xl text-fg textShadow tracking-widest">
 
-          <FormRow>
-            <FormLabel htmlForm="title"></FormLabel>
+              </label>
 
-            <FormInput type="text" id="title" name="title" />
-          </FormRow>
+            <input
+              type="time"
+              id="time"
+              name="time"
+              className="font-rancho italic text-xl text-fg tracking-widest outline-none hover:outline-none hover:bg-hvr hover:text-black focus:outline-none" />
+          </div>
 
-          <FormRow>
-            <FormLabel htmlForm="entry"></FormLabel>
+          <div className="">
+            <label
+              htmlForm="title"
+              className="font-rancho italic text-xl text-fg textShadow tracking-widest">
 
-            <FormTextArea id="entry" name="entry"></FormTextArea>
-          </FormRow>
-        </FormEntryContainer>
+              </label>
 
-        <FormButtonContainer></FormButtonContainer>
-      </FormContainer>
-    </NewEntryContainer>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              className="font-rancho italic text-xl text-center text-fg tracking-widest outline-none hover:outline-none hover:bg-hvr hover:text-black focus:outline-none" />
+          </div>
+
+          <div className="">
+            <label
+              htmlForm="entry"
+              className="font-rancho italic text-xl text-fg textShadow tracking-widest">
+
+              </label>
+
+            <textarea
+              id="entry" 
+              name="entry"
+              className="font-rancho italic text-xl text-fg tracking-widest outline-none hover:outline-none hover:bg-hvr hover:text-black focus:outline-none p-l-2"></textarea>
+          </div>
+        </div>
+
+        <div className=""></div>
+      </form>
+    </div>
   );
 };
