@@ -7,7 +7,7 @@ export default function SignUpRightTop({ props, confirmPassword, handleChange })
         </label>
 
         <input
-          type="number"
+          type="text"
           id="phone"
           name="phone"
           required

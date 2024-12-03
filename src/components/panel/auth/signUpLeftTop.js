@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function SignUpLeftTop({ props, handleChange }) {
   return (
     <div className="flex flex-col items-center justify-start w-[45%] h-[350px] p-2 ml-2 mr-2 border-2 border-bdr rounded-lg overflow-y-auto">
@@ -101,6 +103,7 @@ export default function SignUpLeftTop({ props, handleChange }) {
           id="postal"
           name="postal"
           required
+          maxLength="5"
           value={props.postal}
           onChange={handleChange}
           className="font-rancho italic bg-gray-600 border-2 border-bdr rounded-lg p-2 text-fg text-xl text-center w-[60%] tracking-widest outline-none hover:bg-bdr hover:border-black hover:text-black hover:transition-transform duration-300 hover:scale-105" />
